@@ -243,8 +243,8 @@
 
     <!-- Modules -->
     <modules>
-        <module>restful-service-swaggerv1</module>
-        <module>restful-service-swaggerv2</module>
+        <module>restful-service-swaggerv1-metrics</module>
+        <module>restful-service-swaggerv2-metrics</module>
     </modules>
 
     <!-- Configuration of maven artifacts distribution to private NEXUS OSS repository -->
