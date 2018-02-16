@@ -34,7 +34,6 @@ public class RestfulServiceMainRoute extends RouteBuilder {
 		 */
 		from("cxfrs:bean:restfulService?bindingStyle=SimpleConsumer")
 				.routeId("{{camel.name.route}}-main")
-				.routePolicyRef("metricsPolicy")
 				.streamCaching() // Enable stream-caching
 				.log(LoggingLevel.INFO, "Received RESTful request - Headers: ${headers} \n body: ${body}")
 				// Call operation dynamically

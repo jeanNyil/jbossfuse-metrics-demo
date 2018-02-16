@@ -52,7 +52,7 @@
             class="org.jeannyil.fuse.cxfrs.swaggerv2.processor.PrepareRestResponseProcessor" id="prepareRestResponseProcessor"/>
     <!-- Camel Metrics policy definition to group business metrics -->
     <bean
-            class="org.apache.camel.component.metrics.routepolicy.MetricsRoutePolicy" id="metricsPolicy">
+            class="org.apache.camel.component.metrics.routepolicy.MetricsRoutePolicyFactory" id="metricsRoutePolicy">
         <property name="useJmx" value="true"/>
         <property name="jmxDomain" value="org.jeannyil.fuse.cxfrs.swaggerv2.metrics"/>
         <property name="prettyPrint" value="true"/>

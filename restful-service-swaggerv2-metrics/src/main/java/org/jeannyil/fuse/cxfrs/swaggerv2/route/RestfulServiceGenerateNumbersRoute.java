@@ -45,7 +45,6 @@ public class RestfulServiceGenerateNumbersRoute extends RouteBuilder {
          */
         from("direct:getRandomlyGeneratedNumbers")
                 .routeId("{{camel.name.route}}-generatenumbers")
-                .routePolicyRef("metricsPolicy")
                 .log(LoggingLevel.INFO, "Starting the 'Generate Numbers' RESTful service operation...")
                 // Generate numbers according to input parameters (count and range)
                 .process("generateRandomNumbersProcessor")
