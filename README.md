@@ -6,6 +6,8 @@ services running on Apache KARAF containers (Red Hat JBoss Fuse standalone or in
 * [restful-service-swaggerv2-metrics](restful-service-swaggerv2-metrics) (```swagger v2.0```)
 
 ## :warning: WARNING:
+- The *__Red Hat JBoss Fuse 6.3.0 Rollup 6 (v6.3.0.redhat-329) BOM__* is used in this project. So make sure you use the same patch version or
+adapt to your current patch version of Red Hat JBoss Fuse 6.3.0
 - This project is configured to use a repository manager. 
 Thus, the [parent POM](pom.xml) points to my private [Sonatype Nexus Repository OSS](https://www.sonatype.com/download-oss-sonatype).
 My [Sonatype Nexus Repository OSS](https://www.sonatype.com/download-oss-sonatype) is configured to proxy the following 
@@ -21,8 +23,6 @@ the two Red Hat maven repositories above.
 tests according to the tested module:
     - [restful-service-swaggerv1-metrics PID](restful-service-swaggerv1-metrics/src/main/fabric8/org.jeannyil.fuse.restful-service-swaggerv1-metrics.properties)
     - [restful-service-swaggerv2-metrics PID](restful-service-swaggerv2-metrics/src/main/fabric8/org.jeannyil.fuse.restful-service-swaggerv2-metrics.properties)
-- The *__Red Hat JBoss Fuse 6.3.0 Rollup 5 (v6.3.0.redhat-310) BOM__* is used in this project. So make sure you use the same patch version or
-adapt to your current patch version of Red Hat JBoss Fuse 6.3.0
 
 ## :construction: TODO:
 - *[restful-service-swaggerv1-metrics README](restful-service-swaggerv1-metrics)  with build/deployment instructions*
