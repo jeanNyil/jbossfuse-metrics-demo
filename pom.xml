@@ -191,7 +191,7 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Private-Package>fr.psa.esb.poc.*</Private-Package>
+                        <Private-Package>org.jeannyil.fuse.*</Private-Package>
                         <Import-Package>
                             javax.ws.rs;version="[2,3)",
                             javax.ws.rs.core;version="[2,3)",
