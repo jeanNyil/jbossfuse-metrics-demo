@@ -50,7 +50,7 @@ public class RestfulServiceGenerateNumbersRoute extends RouteBuilder {
                 .process("generateRandomNumbersProcessor")
                 // Transform the Response POJO message to JSON format
                 .marshal().json(JsonLibrary.Jackson, true)
-                .log(LoggingLevel.INFO, "Generate response:\n ${body}")
+                .log(LoggingLevel.INFO, "Generated response:\n ${body}")
                 // Collect counter metrics on successfully processed exchanges
                 .toD("metrics:counter:${routeId}.ok")
                 .log(LoggingLevel.INFO, "The 'Generate Numbers' RESTful service operation is DONE");
