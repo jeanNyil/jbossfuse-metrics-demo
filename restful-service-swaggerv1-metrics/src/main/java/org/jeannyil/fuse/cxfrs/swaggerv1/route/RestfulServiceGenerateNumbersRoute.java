@@ -24,6 +24,8 @@ public class RestfulServiceGenerateNumbersRoute extends RouteBuilder {
                 .process("buildErrorBeanProcessor")
                 // Transform the ErrorBean message to JSON format
                 .marshal().json(JsonLibrary.Jackson, true)
+                // Prepare a validation exception RESTful response to caller
+                .process("prepareRestResponseProcessor")
                 // Collect counter metrics on requests that failed validation
                 .toD("metrics:counter:${routeId}.validation-ko");
         onException(Exception.class)
@@ -37,6 +39,8 @@ public class RestfulServiceGenerateNumbersRoute extends RouteBuilder {
                 .process("buildErrorBeanProcessor")
                 // Transform the ErrorBean message to JSON format
                 .marshal().json(JsonLibrary.Jackson, true)
+                // Prepare an exception RESTful response to caller
+                .process("prepareRestResponseProcessor")
                 // Collect counter metrics on requests that failed for all other reasons
                 .toD("metrics:counter:${routeId}.other-ko");
 

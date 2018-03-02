@@ -1,7 +1,7 @@
 package org.jeannyil.fuse.cxfrs.swaggerv1.constants;
 
 public enum UtilHeadersEnum {
-	ERRORTYPE("utilHeaders");
+	ERRORTYPE("errorType");
 
 	private String utilHeaders;
 
