@@ -30,6 +30,20 @@
 	</properties>
 
     <dependencies>
+        <!-- Used for swagger v2 annotations -->
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-jaxrs</artifactId>
+            <version>1.5.9</version>
+            <optional>true</optional>
+            <exclusions>
+                <!-- avoid this old dependency which breaks CXF -->
+                <exclusion>
+                    <groupId>javax.ws.rs</groupId>
+                    <artifactId>jsr311-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <!--  Used with org.apache.cxf.jaxrs.swagger.Swagger2Feature bean -->
         <dependency>
             <groupId>org.apache.cxf</groupId>
